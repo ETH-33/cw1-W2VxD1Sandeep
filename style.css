@@ -1,0 +1,139 @@
+/* Navbar */
+/* Navbar styles */
+.navbar {
+    background-color: #f8f8f8;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Logo styles */
+  .navbar-logo img {
+    height: 40px;
+  }
+  
+
+  /* Menu styles */
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .navbar-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-menu li a:hover {
+    color: #555;
+  }
+
+  
+/* Body styles */
+body {
+    background-color: #f0f5fa;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar styles */
+
+  
+  /* Hero section styles */
+  .hero-section {
+    background-image: url("hero-background.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero-content h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  .hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: black;
+  }
+  
+  .hero-content .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-content .btn:hover {
+    background-color: #555;
+  }
+  
+  /* Featured products section styles */
+  .featured-products {
+    text-align: center;
+    padding: 80px 0;
+  }
+  
+  .featured-products h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+  
+  /* Brands section styles */
+  .brands-section {
+    text-align: center;
+    background-color: #fff;
+    padding: 80px 0;
+  }
+  
+  .brands-section h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .brand-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
+  
+  /* Footer styles */
+  .footer {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  

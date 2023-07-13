@@ -167,8 +167,10 @@ nav ul li a:hover span:after {
         <h2>Sign Up</h2>
         <form id="signupForm" method="post">
             <input type="text" name="fullname" id="fullname" placeholder="Full Name" required>
+            <input type="text" name="email" id="email" placeholder="Email" required>
             <input type="text" name="username" id="username" placeholder="Username" required>
             <input type="password" name="password" id="password" placeholder="Password" required>
+            <input type="password" name="repeat-password" id="repeat-password" placeholder="Repeat-password" required>
             <input type="submit" value="Sign Up">
         </form>
         <p>Already have an account? <a href="login.html">Log in</a></p>
@@ -180,8 +182,10 @@ nav ul li a:hover span:after {
 
             // Retrieve input values
             var fullname = document.getElementById("fullname").value;
+            var email = document.getElementById("email").value;
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
+            var repeatpassword = document.getElementById("repeat-password").value;
 
             // Check if the username already exists in local storage
             var existingUser = localStorage.getItem(username);
@@ -193,8 +197,10 @@ nav ul li a:hover span:after {
                 // Create a user object
                 var user = {
                     fullname: fullname,
+                    emal: email,
                     username: username,
-                    password: password
+                    password: password,
+                    repeatpassword: repeat-password
                 };
 
                 // Store the user data in local storage

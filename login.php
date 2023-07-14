@@ -1,4 +1,39 @@
-<!DOCTYPE html>
+<?php
+
+$is_invalid = false;
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    
+    $mysqli = require __DIR__ . "/database.php";
+    
+    $sql = sprintf("SELECT * FROM user
+                    WHERE email = '%s'",
+                   $mysqli->real_escape_string($_POST["email"]));
+    
+    $result = $mysqli->query($sql);
+    
+    $user = $result->fetch_assoc();
+    
+    if ($user) {
+        
+        if (password_verify($_POST["password"], $user["password_hash"])) {
+            
+            session_start();
+            
+            session_regenerate_id(); //Prevents session fixation attack
+            
+            $_SESSION["user_id"] = $user["id"];
+            
+            header("Location: index.php");
+            exit;
+        }
+    }
+    
+    $is_invalid = true;
+}
+
+?>
+
 <html lang="en">
 
 <head>
@@ -161,17 +196,20 @@ nav ul li a:hover span:after {
       </ul>
     </nav>
   </header>
+  <?php if ($is_invalid): ?>
+        <em>Invalid login</em>
+    <?php endif; ?>
   <section class="login">
     <h1>Mero Shoe!</h1>
     <h2>Login</h2>
     <form id="loginForm" method="post">
-      <input type="text" name="username" id="username" placeholder="Username" required>
+      <input type="text" name="email" id="username" placeholder="email" required>
       <input type="password" name="password" id="password" placeholder="Password" required>
       <input type="submit" value="Login">
     </form>
     <p>If you don't have an account, <a href="signup.html">Sign up </a></p>
   </section>
-
+<!-- 
   <script>
     document.getElementById("loginForm").addEventListener("submit", function (event) {
       event.preventDefault(); // Prevent form submission
@@ -199,7 +237,7 @@ nav ul li a:hover span:after {
         alert("Invalid username. Please try again.");
       }
     });
-  </script>
+  </script> -->
 </body>
 
 </html>

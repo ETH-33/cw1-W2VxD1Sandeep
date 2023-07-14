@@ -47,9 +47,8 @@ $stmt->bind_param("sss",
                   
 if ($stmt->execute()) {
 
-    header("Location: signup-success.html");
+    header("Location: login.php");
     exit;
-    
 } else {
         die($mysqli->error . " " . $mysqli->errno);
     }

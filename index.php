@@ -208,7 +208,7 @@ if (isset($_SESSION["user_id"])) {
     <header>
         <nav>
             <ul>
-                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./index.php" class="active">Home</a></li>
                 <li><a href="./About.html">About Us</a></li>
                 <li><a href="./contact.html">Contact</a></li>
                 <?php if (isset($user)): ?>
@@ -219,7 +219,8 @@ if (isset($_SESSION["user_id"])) {
         
     <?php else: ?>
         
-        <li><a href="login.php">Log in</a> or <a href="signup.html">sign up</a></li>
+        <li><a href="login.php">Log in</a> </li>
+        <li><a href="signup.html">Sign up</a></li>
         
     <?php endif; ?>
     

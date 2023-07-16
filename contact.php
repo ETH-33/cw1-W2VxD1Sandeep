@@ -32,7 +32,7 @@ $body = "Name: $name\nEmail: $email\nMessage: $message";
 
 mail("someone@example.com", $subject, $body);
 
-// Redirect to the success page
-header("Location: success.html");
+// Redirect to the home page
+header("Location: index.php");
 
 ?>

@@ -190,7 +190,7 @@ nav ul li a:hover span:after {
   <header>
     <nav>
       <ul>
-        <li><a href="./index.html">Home</a></li>
+        <li><a href="./index..php">Home</a></li>
         <li><a href="./About.html">About Us</a></li>
         <li><a href="./contact.html">Contact</a></li>
       </ul>
